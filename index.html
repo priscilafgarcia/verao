@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Seleção de Verão · VisArti</title>
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --caramelo:#B4917B; --greige:#B4AA9E; --off:#F4F5EB; --taupe:#918673;
+  --ink:#2B2722; --muted:#5A5247; --white:#fff; --black:#000;
+  --line:#DAD6C8;
+  --sans:"Montserrat",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--off);color:var(--ink);font-family:var(--sans);font-weight:400;font-size:15px;line-height:1.65;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:20px}
+h1,h2,h3{font-weight:500;text-transform:uppercase;letter-spacing:.3em;margin:0}
+h2{font-size:15px;text-align:center;margin-bottom:28px;line-height:1.6}
+h2::after{content:"";display:block;width:36px;height:1px;background:var(--caramelo);margin:16px auto 0}
+
+/* HERO */
+.hero{position:relative;background:var(--ink);color:var(--white);min-height:min(100svh,780px);display:flex;align-items:flex-end;overflow:hidden}
+.hero > img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,rgba(0,0,0,.55) 0%,rgba(0,0,0,.05) 35%,rgba(0,0,0,.2) 55%,rgba(0,0,0,.78) 100%)}
+.hero .in{position:relative;z-index:2;width:100%;padding:28px 20px 44px;text-align:center}
+.hero .logo-m{position:absolute;z-index:2;top:32px;left:50%;transform:translateX(-50%);width:150px}
+.hero .logo-d{display:none}
+@media(max-width:899px){header.hero .cap{top:auto;bottom:10px;right:50%;transform:translateX(50%);white-space:nowrap}.hero .in{padding-bottom:56px}}
+.hero h1{font-size:clamp(22px,6.4vw,38px);line-height:1.3;margin-bottom:16px}
+.hero p{margin:0 auto 8px;max-width:420px;font-size:14px;font-weight:400}
+.hero .validade{margin-top:20px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:500}
+.hero .cap{position:absolute;z-index:2;right:12px;top:12px}
+.cap{font-size:10px;letter-spacing:.06em;color:var(--white);opacity:.9}
+@media(min-width:900px){
+  .hero{min-height:0;background:var(--off);color:var(--ink);display:grid;grid-template-columns:1fr 1fr;align-items:stretch;height:min(100vh,820px)}
+  .hero::before{display:none}
+  .hero > img.bg{position:relative;grid-column:2;grid-row:1;height:100%;order:2}
+  .hero .in{grid-column:1;grid-row:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:40px 6vw}
+  .hero .logo-m{display:none}
+  .hero .logo-d{display:block;width:190px;margin-bottom:48px}
+  .hero h1{font-size:34px}
+  .hero p{color:var(--ink)}
+  .hero .cap{right:auto;left:calc(50% + 12px);top:auto;bottom:10px}
+}
+
+/* INTRO */
+section.como{padding:64px 0 24px}
+.intro{max-width:560px;margin:0 auto 44px;text-align:center}
+.intro p{margin:0 0 10px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:12px;counter-reset:s}
+.steps li{counter-increment:s;background:var(--white);border:1px solid var(--line);padding:18px 18px 18px 64px;position:relative;font-size:14px}
+.steps li::before{content:"0" counter(s);position:absolute;left:18px;top:16px;font-size:18px;font-weight:300;letter-spacing:.1em;color:var(--taupe)}
+.nota{text-align:center;color:var(--muted);font-size:13px;margin:22px auto 0;max-width:620px}
+@media(min-width:601px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.steps{grid-template-columns:repeat(4,1fr)}}
+
+/* LOOKBOOK */
+section.look{padding:48px 0 24px}
+.strip{display:flex;gap:12px;overflow-x:auto;padding:0 20px 8px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.strip figure{margin:0;flex:0 0 68%;max-width:300px;scroll-snap-align:center}
+.strip img{width:100%;aspect-ratio:2/3;object-fit:cover}
+@media(min-width:900px){.strip{justify-content:center;overflow:visible}.strip figure{flex:1 1 0;max-width:260px}}
+.legenda{margin:6px 0 0;font-size:11px;color:var(--muted);letter-spacing:.03em}
+
+/* TOOLS */
+.tools{position:relative;top:0;z-index:5;background:rgba(244,245,235,.96);backdrop-filter:blur(6px);border-block:1px solid var(--line);margin-top:36px;padding:12px 0}
+@media(min-width:900px){.tools{position:sticky}}
+.tools .wrap{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:inherit;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--taupe);background:transparent;color:var(--ink);padding:7px 14px;border-radius:0;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--off);border-color:var(--ink)}
+.sort{font:inherit;font-size:13px;border:1px solid var(--taupe);background:var(--white);color:var(--ink);padding:8px 10px;border-radius:0;max-width:100%}
+.count{color:var(--muted);font-size:12px;letter-spacing:.08em;margin:22px 0 0}
+
+/* GRUPOS */
+.group{padding-top:36px}
+.group > h3{font-size:14px;margin:0 0 20px;padding-bottom:12px;border-bottom:1px solid var(--taupe)}
+.abertura{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:22px}
+.abertura figure{margin:0}
+.abertura img{width:100%;aspect-ratio:2/3;object-fit:cover}
+@media(min-width:900px){.abertura{grid-template-columns:repeat(2,minmax(0,1fr));max-width:560px}}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:0 0 12px}
+@media(min-width:601px){.grid{grid-template-columns:repeat(2,1fr);gap:20px}}
+@media(min-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--white);border:1px solid var(--line);display:flex;flex-direction:column;min-width:0}
+.ph{position:relative;aspect-ratio:4/3;background:var(--off);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.ph img{width:100%;height:100%;object-fit:contain;background:var(--white)}
+.ph .fallback{text-align:center;padding:0 16px;display:flex;flex-direction:column;align-items:center;gap:12px}
+.ph .fallback img{width:34px;height:auto;opacity:.9;background:none}
+.ph .fallback span{font-size:12px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+.selo{position:absolute;top:10px;left:10px;background:var(--ink);color:var(--off);font-size:11px;font-weight:500;letter-spacing:.08em;padding:3px 9px}
+.info{padding:16px 18px 20px;display:flex;flex-direction:column;gap:4px;flex:1}
+.marca{font-size:15px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;line-height:1.3}
+.desc{font-size:13px;color:var(--muted)}
+.cod{font-size:11px;color:var(--muted);letter-spacing:.06em;word-break:break-all}
+.un{font-size:12px;color:var(--ink);font-weight:500}
+.precos{margin:10px 0 14px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.lbl{color:var(--muted);font-size:12px}
+.de{color:var(--muted);text-decoration:line-through;font-size:14px}
+.por{font-size:22px;font-weight:600;color:var(--ink);letter-spacing:.01em}
+.btn{margin-top:auto;display:block;text-align:center;text-decoration:none;background:var(--ink);color:var(--off);padding:14px 16px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:500}
+.btn:hover,.btn:focus{background:var(--caramelo);color:var(--ink)}
+
+/* CURADORIA */
+section.cur{padding:72px 0 72px}
+.cur .box{display:grid;grid-template-columns:1fr;gap:28px;align-items:center;max-width:880px;margin:0 auto}
+.cur img{width:100%;max-width:320px;aspect-ratio:2/3;object-fit:cover;margin:0 auto}
+.cur h2{text-align:left}
+.cur h2::after{margin-left:0}
+.cur p{margin:0 0 12px}
+@media(min-width:760px){.cur .box{grid-template-columns:320px 1fr;gap:56px}}
+
+/* RODAPE */
+footer{background:var(--taupe);color:var(--black);padding:48px 0 52px;text-align:center;font-size:14px;font-weight:500}
+footer img{width:150px;margin:0 auto 24px}
+footer p{margin:4px 0}
+footer .pv{margin-top:20px;font-size:12px;letter-spacing:.06em}
+</style>
+</head>
+<body>
+<header class="hero">
+  <img class="bg" src="img/hero-loewe.jpg" width="1067" height="1600" alt="Modelo usando óculos de sol Loewe">
+  <span class="cap">Imagem ilustrativa do shooting VisArti.</span>
+  <img class="logo-m" src="img/logo-branco.png" width="900" height="451" alt="Óticas VisArti">
+  <div class="in">
+    <img class="logo-d" src="img/logo-preto.png" width="900" height="451" alt="Óticas VisArti">
+    <h1>Seleção de Verão</h1>
+    <p>Uma curadoria de óculos de sol de grife, reservada aos clientes da casa, em condição especial.</p>
+    <p>Cada peça é única ou tem pouquíssimas unidades.</p>
+    <div class="validade">Válida de 16 a 27 de novembro de 2026, até as 18h</div>
+  </div>
+</header>
+
+<section class="como">
+  <div class="wrap">
+    <div class="intro">
+      <p>Uma seleção feita com calma, para quem já é da casa.</p>
+    </div>
+    <h2>Como funciona</h2>
+    <ol class="steps">
+      <li>Toque em “Quero este” na peça que escolheu.</li>
+      <li>A Jéssica confirma e reserva a peça para você por 48 horas.</li>
+      <li>Pagamento por Pix ou link de cartão.</li>
+      <li>Retirada na loja ou entrega combinada.</li>
+    </ol>
+    <p class="nota">Válido até sexta, 27/11/2026, às 18h, ou enquanto houver unidades disponíveis. Este endereço é um convite: por favor, não compartilhe.</p>
+  </div>
+</section>
+
+<section class="look" aria-label="Lookbook">
+  <div class="wrap"><h2>Lookbook</h2></div>
+  <div class="strip">
+    <figure><img src="img/look-1.jpg" width="1067" height="1600" loading="lazy" alt="Look do shooting VisArti"></figure>
+    <figure><img src="img/look-2.jpg" width="1067" height="1600" loading="lazy" alt="Look do shooting VisArti"></figure>
+    <figure><img src="img/look-3.jpg" width="1067" height="1600" loading="lazy" alt="Look do shooting VisArti"></figure>
+    <figure><img src="img/look-4.jpg" width="1067" height="1600" loading="lazy" alt="Look do shooting VisArti"></figure>
+  </div>
+  <div class="wrap"><p class="legenda">Imagem ilustrativa do shooting VisArti.</p></div>
+</section>
+
+<div class="tools">
+  <div class="wrap">
+    <div class="chips" id="chips" role="group" aria-label="Filtrar por marca"></div>
+    <label><span style="position:absolute;left:-9999px">Ordenar</span>
+      <select class="sort" id="sort" aria-label="Ordenar por preço">
+        <option value="">Ordem da curadoria</option>
+        <option value="asc">Menor preço</option>
+        <option value="desc">Maior preço</option>
+      </select>
+    </label>
+  </div>
+</div>
+
+<main class="wrap">
+  <p class="count" id="count"></p>
+  <div id="lista"></div>
+</main>
+
+<section class="cur">
+  <div class="wrap">
+    <div class="box">
+      <div>
+        <img src="img/pri-curadoria.jpg" width="1067" height="1600" loading="lazy" alt="Priscila Garcia, consultora de imagem e visagista">
+      </div>
+      <div>
+        <h2>A curadoria</h2>
+        <p>Priscila Garcia, consultora de imagem e visagista, selecionou pessoalmente cada uma destas peças.</p>
+        <p>Uma seleção pensada com cuidado para os clientes da casa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="img/logo-branco.png" width="900" height="451" loading="lazy" alt="Óticas VisArti">
+    <p>Av. Rio Branco, 773, Santa Lúcia · Vitória/ES</p>
+    <p>Segunda a sexta, das 8h às 18h</p>
+    <p>WhatsApp (27) 99511-1570</p>
+    <p class="pv">Seleção privada para clientes da casa.</p>
+  </div>
+</footer>
+
+<script src="./pecas.js"></script>
+<script>
+(function () {
+  var PECAS = (window.PECAS || []).slice();
+  var ZAP = "5527995111570";
+  var ORDEM = ["Tom Ford","Fendi","Loewe","Emilio Pucci","Ferragamo","Ray Ban","Web"];
+  var ABERTURA = {
+    "Fendi": ["img/fendi-1.jpg","img/fendi-2.jpg"],
+    "Loewe": ["img/loewe-1.jpg","img/loewe-2.jpg"],
+    "Tom Ford": ["img/tomford-1.jpg","img/tomford-2.jpg"]
+  };
+  var marcaAtual = "Todas", ordem = "";
+  var lista = document.getElementById("lista");
+  var chips = document.getElementById("chips");
+  var count = document.getElementById("count");
+
+  function brl(n) { var c = Number(n) % 1 ? 2 : 0; return "R$ " + Number(n).toLocaleString("pt-BR", {minimumFractionDigits: c, maximumFractionDigits: c}); }
+  function nome(m) { return m === "Ray Ban" ? "Ray-Ban" : m; }
+  function limpa(p) {
+    var r = String(p.descricao || "").split(/\s+/).filter(function (w) { return w && !/\d/.test(w) && !/^(oculos?|sol)$/i.test(w); }).join(" ");
+    r = r.replace(/Titanio/g, "Titânio").replace(/Unisex/g, "Unissex");
+    return "Óculos de sol" + (r ? " · " + r : "");
+  }
+  function link(p) {
+    var t = "Olá! Vi a Seleção de Verão e tenho interesse nos óculos " + nome(p.marca) + ", código " + p.ref + ", por " + brl(p.por) + ".";
+    return "https://wa.me/" + ZAP + "?text=" + encodeURIComponent(t);
+  }
+  function el(tag, cls, txt) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (txt != null) e.textContent = txt;
+    return e;
+  }
+  function card(p) {
+    var c = el("article", "card");
+    var ph = el("div", "ph");
+    var fb = el("div", "fallback");
+    var sim = new Image(); sim.src = "img/simbolo-greige.png"; sim.width = 34; sim.height = 34; sim.alt = ""; sim.loading = "lazy";
+    fb.appendChild(sim);
+    fb.appendChild(el("span", null, nome(p.marca)));
+    ph.appendChild(fb);
+    if (p.foto) {
+      var img = new Image();
+      img.alt = "Óculos " + nome(p.marca) + " " + p.ref;
+      img.loading = "lazy";
+      img.onload = function () { fb.style.display = "none"; ph.insertBefore(img, ph.firstChild); };
+      img.src = p.foto;
+    }
+    if (p.desconto) ph.appendChild(el("span", "selo", "-" + p.desconto + "%"));
+    c.appendChild(ph);
+    var i = el("div", "info");
+    i.appendChild(el("div", "marca", nome(p.marca)));
+    var d = limpa(p); if (d) i.appendChild(el("div", "desc", d));
+    i.appendChild(el("div", "cod", "Código " + p.ref));
+    if (p.qtd > 1) i.appendChild(el("div", "un", p.qtd + " unidades"));
+    var pr = el("div", "precos");
+    pr.appendChild(el("span", "lbl", "de"));
+    pr.appendChild(el("span", "de", brl(p.de)));
+    pr.appendChild(el("span", "lbl", "por"));
+    pr.appendChild(el("span", "por", brl(p.por)));
+    i.appendChild(pr);
+    var a = el("a", "btn", "Quero este");
+    a.href = link(p); a.target = "_blank"; a.rel = "noopener";
+    i.appendChild(a);
+    c.appendChild(i);
+    return c;
+  }
+  function grade(arr) {
+    var g = el("div", "grid");
+    arr.forEach(function (p) { g.appendChild(card(p)); });
+    return g;
+  }
+  function abertura(m) {
+    var fs = ABERTURA[m]; if (!fs) return null;
+    var box = el("div", "abertura");
+    fs.forEach(function (src) {
+      var f = el("figure");
+      var im = new Image(); im.src = src; im.width = 1067; im.height = 1600; im.loading = "lazy"; im.alt = "Shooting VisArti " + m;
+      f.appendChild(im);
+      f.appendChild(el("p", "legenda", "Imagem ilustrativa do shooting VisArti."));
+      box.appendChild(f);
+    });
+    return box;
+  }
+  function render() {
+    var sel = PECAS.filter(function (p) { return marcaAtual === "Todas" || p.marca === marcaAtual; });
+    lista.textContent = "";
+    var f = document.createDocumentFragment();
+    if (ordem) {
+      sel.sort(function (a, b) { return ordem === "asc" ? a.por - b.por : b.por - a.por; });
+      f.appendChild(grade(sel));
+    } else {
+      var marcas = ORDEM.filter(function (m) { return sel.some(function (p) { return p.marca === m; }); });
+      sel.forEach(function (p) { if (marcas.indexOf(p.marca) < 0) marcas.push(p.marca); });
+      marcas = marcas.filter(function (m, i) { return marcas.indexOf(m) === i; });
+      marcas.forEach(function (m) {
+        var s = el("section", "group");
+        s.appendChild(el("h3", null, nome(m)));
+        var a = abertura(m); if (a) s.appendChild(a);
+        s.appendChild(grade(sel.filter(function (p) { return p.marca === m; })));
+        f.appendChild(s);
+      });
+    }
+    lista.appendChild(f);
+    count.textContent = sel.length + (sel.length === 1 ? " modelo" : " modelos");
+  }
+  function chipsInit() {
+    var presentes = {};
+    PECAS.forEach(function (p) { presentes[p.marca] = 1; });
+    var marcas = ORDEM.filter(function (m) { return presentes[m]; });
+    Object.keys(presentes).forEach(function (m) { if (marcas.indexOf(m) < 0) marcas.push(m); });
+    ["Todas"].concat(marcas).forEach(function (m) {
+      var b = el("button", "chip", nome(m));
+      b.type = "button";
+      b.setAttribute("aria-pressed", m === marcaAtual ? "true" : "false");
+      b.onclick = function () {
+        marcaAtual = m;
+        Array.prototype.forEach.call(chips.children, function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+        render();
+      };
+      chips.appendChild(b);
+    });
+  }
+  document.getElementById("sort").onchange = function (e) { ordem = e.target.value; render(); };
+  chipsInit();
+  render();
+})();
+</script>
+</body>
+</html>
