@@ -8,7 +8,8 @@ window.PECAS = [
   "de": 3090,
   "por": 1550,
   "desconto": 50,
-  "foto": "fotos/EP0210_5221W.jpg?v=4"
+  "foto": "fotos/EP0210_5221W.jpg?v=4",
+  "modelo": "modelos/EP0210_5221W.jpg?v=4"
  },
  {
   "ref": "EP0211_5421E",
@@ -88,7 +89,8 @@ window.PECAS = [
   "de": 3782.46,
   "por": 1890,
   "desconto": 50,
-  "foto": "fotos/FE40139I_5353A.jpg?v=4"
+  "foto": "fotos/FE40139I_5353A.jpg?v=4",
+  "modelo": "modelos/FE40139I_5353A.jpg?v=4"
  },
  {
   "ref": "FE40140U_5301A",
@@ -278,7 +280,8 @@ window.PECAS = [
   "de": 6438.9,
   "por": 3220,
   "desconto": 50,
-  "foto": "fotos/LW40132I_6596C.jpg?v=4"
+  "foto": "fotos/LW40132I_6596C.jpg?v=4",
+  "modelo": "modelos/LW40132I_6596C.jpg?v=4"
  },
  {
   "ref": "LW40130U_4901A",
@@ -358,7 +361,8 @@ window.PECAS = [
   "de": 4501,
   "por": 2250,
   "desconto": 50,
-  "foto": "fotos/LW40127I_4890E.jpg?v=4"
+  "foto": "fotos/LW40127I_4890E.jpg?v=4",
+  "modelo": "modelos/LW40127I_4890E.jpg?v=4"
  },
  {
   "ref": "LW40127I_4801A",
@@ -558,7 +562,8 @@ window.PECAS = [
   "de": 2895,
   "por": 1450,
   "desconto": 50,
-  "foto": "fotos/FT1157_5001E.jpg?v=4"
+  "foto": "fotos/FT1157_5001E.jpg?v=4",
+  "modelo": "modelos/FT1157_5001E.jpg?v=4"
  },
  {
   "ref": "FT1044_6052N",
@@ -678,7 +683,8 @@ window.PECAS = [
   "de": 2430,
   "por": 1220,
   "desconto": 50,
-  "foto": "fotos/FT1186_5125E.jpg?v=4"
+  "foto": "fotos/FT1186_5125E.jpg?v=4",
+  "modelo": "modelos/FT1186_5125E.jpg?v=4"
  },
  {
   "ref": "FT1156_5952E",
