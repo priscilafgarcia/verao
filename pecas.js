@@ -1,4 +1,4 @@
-// Lista pública da venda privada (sem custo). Gerada de ../pecas.json em 30/10/2026.
+// Lista pública da Seleção de Verão VisArti.
 window.PECAS = [
  {
   "ref": "EP0210_5221W",
