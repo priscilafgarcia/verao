@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Seleção de Verão · VisArti</title>
+<meta name="description" content="Uma curadoria de óculos de sol de grife, reservada aos clientes da casa. De 16 a 27 de novembro.">
+<meta property="og:title" content="Seleção de Verão · VisArti">
+<meta property="og:description" content="Uma curadoria de óculos de sol de grife, reservada aos clientes da casa. De 16 a 27 de novembro.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://priscilafgarcia.github.io/verao/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,22 +34,21 @@ h2{font-size:15px;text-align:center;margin-bottom:28px;line-height:1.6}
 h2::after{content:"";display:block;width:36px;height:1px;background:var(--caramelo);margin:16px auto 0}
 
 /* HERO */
-.hero{position:relative;background:var(--ink);color:var(--white);min-height:min(100svh,780px);display:flex;align-items:flex-end;overflow:hidden}
-.hero > img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
-.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,rgba(0,0,0,.55) 0%,rgba(0,0,0,.05) 35%,rgba(0,0,0,.2) 55%,rgba(0,0,0,.78) 100%)}
-.hero .in{position:relative;z-index:2;width:100%;padding:28px 20px 44px;text-align:center}
-.hero .logo-m{position:absolute;z-index:2;top:32px;left:50%;transform:translateX(-50%);width:150px}
+.hero{position:relative;background:var(--off);color:var(--ink);display:flex;flex-direction:column;overflow:hidden}
+.hero > img.bg{display:block;width:100%;aspect-ratio:4/5;max-height:72svh;object-fit:cover;object-position:center 15%}
+.hero::before{content:"";position:absolute;left:0;right:0;top:0;height:150px;z-index:1;background:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0))}
+.hero .in{position:relative;z-index:2;width:100%;padding:30px 22px 40px;text-align:center}
+.hero .logo-m{position:absolute;z-index:2;top:26px;left:50%;transform:translateX(-50%);width:140px}
 .hero .logo-d{display:none}
-@media(max-width:899px){header.hero .cap{top:auto;bottom:10px;right:50%;transform:translateX(50%);white-space:nowrap}.hero .in{padding-bottom:56px}}
-.hero h1{font-size:clamp(22px,6.4vw,38px);line-height:1.3;margin-bottom:16px}
-.hero p{margin:0 auto 8px;max-width:420px;font-size:14px;font-weight:400}
+.hero h1{font-size:clamp(20px,6vw,38px);line-height:1.35;margin-bottom:16px;overflow-wrap:break-word}
+.hero p{margin:0 auto 8px;max-width:420px;font-size:15px;font-weight:400;color:var(--ink)}
 .hero .validade{margin-top:20px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:500}
-.hero .cap{position:absolute;z-index:2;right:12px;top:12px}
+.hero .cap{position:absolute;z-index:2;left:12px;top:calc(min(125vw,72svh) - 24px)}
 .cap{font-size:10px;letter-spacing:.06em;color:var(--white);opacity:.9}
 @media(min-width:900px){
   .hero{min-height:0;background:var(--off);color:var(--ink);display:grid;grid-template-columns:1fr 1fr;align-items:stretch;height:min(100vh,820px)}
   .hero::before{display:none}
-  .hero > img.bg{position:relative;grid-column:2;grid-row:1;height:100%;order:2}
+  .hero > img.bg{position:relative;grid-column:2;grid-row:1;height:100%;max-height:none;aspect-ratio:auto;order:2}
   .hero .in{grid-column:1;grid-row:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:40px 6vw}
   .hero .logo-m{display:none}
   .hero .logo-d{display:block;width:190px;margin-bottom:48px}
@@ -118,6 +125,9 @@ section.cur{padding:72px 0 72px}
 @media(min-width:760px){.cur .box{grid-template-columns:320px 1fr;gap:56px}}
 
 /* RODAPE */
+.zap-cta{display:inline-block;margin-top:18px;background:var(--black);color:var(--white);text-decoration:none;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:14px 22px}
+.zap-link{color:inherit}
+.zap-float{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:50;display:flex;align-items:center;gap:8px;background:var(--black);color:var(--white);text-decoration:none;padding:12px 16px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.25);font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
 footer{background:var(--taupe);color:var(--black);padding:48px 0 52px;text-align:center;font-size:14px;font-weight:500}
 footer img{width:150px;margin:0 auto 24px}
 footer p{margin:4px 0}
@@ -126,14 +136,15 @@ footer .pv{margin-top:20px;font-size:12px;letter-spacing:.06em}
 </head>
 <body>
 <header class="hero">
-  <img class="bg" src="img/hero-loewe.jpg" width="1067" height="1600" alt="Modelo usando óculos de sol Loewe">
+  <img class="bg" src="img/hero-fendi.jpg" width="1100" height="1320" alt="Modelo usando óculos de sol Fendi">
   <span class="cap">Imagem ilustrativa do shooting VisArti.</span>
-  <img class="logo-m" src="img/logo-branco.png" width="900" height="451" alt="Óticas VisArti">
+  <img class="logo-m" src="img/logo-greige.png" width="900" height="451" alt="Óticas VisArti">
   <div class="in">
-    <img class="logo-d" src="img/logo-preto.png" width="900" height="451" alt="Óticas VisArti">
+    <img class="logo-d" src="img/logo-greige.png" width="900" height="451" alt="Óticas VisArti">
     <h1>Seleção de Verão</h1>
     <p>Uma curadoria de óculos de sol de grife, reservada aos clientes da casa, em condição especial.</p>
     <p>Cada peça é única ou tem pouquíssimas unidades.</p>
+    <a class="zap-cta" href="https://wa.me/5527995111570?text=Ol%C3%A1!%20Recebi%20o%20convite%20da%20Sele%C3%A7%C3%A3o%20de%20Ver%C3%A3o%20e%20gostaria%20de%20falar%20com%20a%20VisArti." target="_blank" rel="noopener">Falar com a VisArti no WhatsApp</a>
     <div class="validade">Válida de 16 a 27 de novembro de 2026, até as 18h</div>
   </div>
 </header>
@@ -146,7 +157,7 @@ footer .pv{margin-top:20px;font-size:12px;letter-spacing:.06em}
     <h2>Como funciona</h2>
     <ol class="steps">
       <li>Toque em “Quero este” na peça que escolheu.</li>
-      <li>A Jéssica confirma e reserva a peça para você por 48 horas.</li>
+      <li>A Jéssica confirma e reserva a peça para você por 24 horas.</li>
       <li>Pagamento por Pix ou link de cartão.</li>
       <li>Retirada na loja ou entrega combinada.</li>
     </ol>
@@ -187,7 +198,7 @@ footer .pv{margin-top:20px;font-size:12px;letter-spacing:.06em}
   <div class="wrap">
     <div class="box">
       <div>
-        <img src="img/pri-curadoria.jpg" width="1067" height="1600" loading="lazy" alt="Priscila Garcia, consultora de imagem e visagista">
+        <img src="img/pri-espelho.jpg" width="1067" height="1600" loading="lazy" alt="Priscila Garcia, consultora de imagem e visagista">
       </div>
       <div>
         <h2>A curadoria</h2>
@@ -203,10 +214,12 @@ footer .pv{margin-top:20px;font-size:12px;letter-spacing:.06em}
     <img src="img/logo-branco.png" width="900" height="451" loading="lazy" alt="Óticas VisArti">
     <p>Av. Rio Branco, 773, Santa Lúcia · Vitória/ES</p>
     <p>Segunda a sexta, das 8h às 18h</p>
-    <p>WhatsApp (27) 99511-1570</p>
+    <p><a class="zap-link" href="https://wa.me/5527995111570" target="_blank" rel="noopener">WhatsApp (27) 99511-1570</a></p>
     <p class="pv">Seleção privada para clientes da casa.</p>
   </div>
 </footer>
+
+<a class="zap-float" href="https://wa.me/5527995111570?text=Ol%C3%A1!%20Recebi%20o%20convite%20da%20Sele%C3%A7%C3%A3o%20de%20Ver%C3%A3o%20e%20gostaria%20de%20falar%20com%20a%20VisArti." target="_blank" rel="noopener" aria-label="Falar com a VisArti no WhatsApp"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg><span>WhatsApp</span></a>
 
 <script src="./pecas.js"></script>
 <script>
